@@ -1,5 +1,7 @@
-#ifdef CONFIG_MSMB_CAMERA_MOTO
+#if defined(CONFIG_MSMB_CAMERA_MOTO)
 #include <media/msmb_generic_buf_mgr_moto.h>
+#elif defined(CONFIG_MSMB_CAMERA_MOTO442)
+#include <media/msmb_generic_buf_mgr_moto442.h>
 #else
 
 #ifndef __MEDIA_MSMB_BUF_MNGR_H__

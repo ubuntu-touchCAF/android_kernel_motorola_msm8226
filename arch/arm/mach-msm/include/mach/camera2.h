@@ -11,8 +11,10 @@
  *
  */
 
-#ifdef CONFIG_MSMB_CAMERA_MOTO
+#if defined(CONFIG_MSMB_CAMERA_MOTO)
 #include <mach/camera2_moto.h>
+#elif defined(CONFIG_MSMB_CAMERA_MOTO442)
+#include <mach/camera2_moto442.h>
 #else
 
 #ifndef __CAMERA2_H__

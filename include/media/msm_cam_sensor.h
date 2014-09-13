@@ -1,5 +1,7 @@
-#ifdef CONFIG_MSMB_CAMERA_MOTO
+#if defined(CONFIG_MSMB_CAMERA_MOTO)
 #include <media/msm_cam_sensor_moto.h>
+#elif defined(CONFIG_MSMB_CAMERA_MOTO442)
+#include <media/msm_cam_sensor_moto442.h>
 #else
 
 #ifndef __LINUX_MSM_CAM_SENSOR_H
