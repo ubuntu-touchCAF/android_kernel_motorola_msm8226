@@ -74,6 +74,7 @@ static noinline void rodata_test(void)
 static inline void rodata_test(void) { }
 #endif
 
+/*
 static int set_page_attributes(unsigned long virt, int numpages,
 	pte_t (*f)(pte_t))
 {
@@ -117,6 +118,7 @@ int set_memory_rw(unsigned long virt, int numpages)
 	return set_page_attributes(virt, numpages, pte_mkwrite);
 }
 EXPORT_SYMBOL(set_memory_rw);
+*/
 
 void set_kernel_text_rw(void)
 {
