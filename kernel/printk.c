@@ -1141,6 +1141,13 @@ static int __init console_setup(char *str)
 	if (!strcmp(str, "ttyb"))
 		strcpy(buf, "ttyS1");
 #endif
+
+#ifdef VT_CONSOLE_FORCE_TTY0
+	// Force console to be tty0
+	strcpy(buf, "tty0");
+	strncpy(buf + 4, str, sizeof(buf) - 5);
+#endif // VT_CONSOLE_FORCE_TTY0
+
 	for (s = buf; *s; s++)
 		if ((*s >= '0' && *s <= '9') || *s == ',')
 			break;
